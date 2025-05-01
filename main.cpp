@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Matrix.h"
-#include <cstdlib>   // rand, srand
+#include "include/Matrix.h"
+#include <cstdlib>
 #include <ctime>
 
 int main() {

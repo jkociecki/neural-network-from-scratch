@@ -1,7 +1,8 @@
-#include "Matrix.h"
+#include "../include/Matrix.h"
 #include <iostream>
 #include <cassert>
 #include <iomanip>
+#include <random>
 
 
 Matrix Matrix::genericOperator(const Matrix &other, const std::function<double(double, double)>& func) const
@@ -69,6 +70,24 @@ Matrix Matrix::transpose() const
     return result;
 }
 
+Matrix Matrix::random(size_t rows, size_t cols, double min, double max)
+{
+    Matrix result(rows, cols);
+    std::random_device rd;
+    std::mt19937 generator(rd());
+    std::uniform_real_distribution<double> dist(min, max);
+
+    for (size_t y = 0; y < rows; y++)
+    {
+        for (size_t x = 0; x < cols; x++)
+        {
+            result.matrix[y][x] = dist(generator);
+        }
+    }
+
+    return result;
+}
+
 Matrix Matrix::operator+(const Matrix &other) const
 {
     return genericOperator(other, [](double a, double b) { return a + b; });
@@ -122,3 +141,14 @@ void Matrix::print(int precision) const
     }
 }
 
+
+
+Matrix Matrix::ones(size_t rows, size_t cols)
+{
+    return {rows, cols, 1.0};
+}
+
+Matrix Matrix::zeros(size_t rows, size_t cols)
+{
+    return {rows, cols, 0.0};
+}

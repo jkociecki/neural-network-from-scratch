@@ -4,8 +4,10 @@ project(nn)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(nn main.cpp
-        Matrix.cpp
-        Matrix.h
-        Matrix.h
-        Layer.cpp
-        Layer.h)
+        src/Matrix.cpp
+        include/Matrix.h
+        include/Matrix.h
+        src/Layer.cpp
+        include/Layer.h
+        src/NeuralNetwork.cpp
+        include/NeuralNetwork.h)

@@ -55,14 +55,20 @@ build CMakeFiles/nn.dir/main.cpp.obj: CXX_COMPILER__nn_unscanned_Debug C$:/CLion
   OBJECT_DIR = CMakeFiles\nn.dir
   OBJECT_FILE_DIR = CMakeFiles\nn.dir
 
-build CMakeFiles/nn.dir/Matrix.cpp.obj: CXX_COMPILER__nn_unscanned_Debug C$:/CLionProjects/nn/Matrix.cpp || cmake_object_order_depends_target_nn
-  DEP_FILE = CMakeFiles\nn.dir\Matrix.cpp.obj.d
+build CMakeFiles/nn.dir/src/Matrix.cpp.obj: CXX_COMPILER__nn_unscanned_Debug C$:/CLionProjects/nn/src/Matrix.cpp || cmake_object_order_depends_target_nn
+  DEP_FILE = CMakeFiles\nn.dir\src\Matrix.cpp.obj.d
   FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\nn.dir
-  OBJECT_FILE_DIR = CMakeFiles\nn.dir
+  OBJECT_FILE_DIR = CMakeFiles\nn.dir\src
 
-build CMakeFiles/nn.dir/Layer.cpp.obj: CXX_COMPILER__nn_unscanned_Debug C$:/CLionProjects/nn/Layer.cpp || cmake_object_order_depends_target_nn
-  DEP_FILE = CMakeFiles\nn.dir\Layer.cpp.obj.d
+build CMakeFiles/nn.dir/src/Layer.cpp.obj: CXX_COMPILER__nn_unscanned_Debug C$:/CLionProjects/nn/src/Layer.cpp || cmake_object_order_depends_target_nn
+  DEP_FILE = CMakeFiles\nn.dir\src\Layer.cpp.obj.d
+  FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\nn.dir
+  OBJECT_FILE_DIR = CMakeFiles\nn.dir\src
+
+build CMakeFiles/nn.dir/NeuralNetwork.cpp.obj: CXX_COMPILER__nn_unscanned_Debug C$:/CLionProjects/nn/NeuralNetwork.cpp || cmake_object_order_depends_target_nn
+  DEP_FILE = CMakeFiles\nn.dir\NeuralNetwork.cpp.obj.d
   FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\nn.dir
   OBJECT_FILE_DIR = CMakeFiles\nn.dir
@@ -75,7 +81,7 @@ build CMakeFiles/nn.dir/Layer.cpp.obj: CXX_COMPILER__nn_unscanned_Debug C$:/CLio
 #############################################
 # Link the executable nn.exe
 
-build nn.exe: CXX_EXECUTABLE_LINKER__nn_Debug CMakeFiles/nn.dir/main.cpp.obj CMakeFiles/nn.dir/Matrix.cpp.obj CMakeFiles/nn.dir/Layer.cpp.obj
+build nn.exe: CXX_EXECUTABLE_LINKER__nn_Debug CMakeFiles/nn.dir/main.cpp.obj CMakeFiles/nn.dir/src/Matrix.cpp.obj CMakeFiles/nn.dir/src/Layer.cpp.obj CMakeFiles/nn.dir/NeuralNetwork.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\nn.dir

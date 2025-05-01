@@ -1,6 +1,3 @@
-//
-// Created by Jędrzej on 2025-05-01.
-//
 
 #ifndef NN_MATRIX_H
 #define NN_MATRIX_H
@@ -20,18 +17,21 @@ public:
     Matrix(size_t r, size_t c, double val = 0.0)
         : rows(r), cols(c), matrix(r, std::vector<double>(c, val)) {}
 
+    static Matrix random(size_t rows, size_t cols, double min, double max);
+    static Matrix ones(size_t rows, size_t cols);
+    static Matrix zeros(size_t rows, size_t cols);
 
     Matrix operator+(const Matrix& other) const;
     Matrix operator-(const Matrix& other) const;
     Matrix operator*(const Matrix& other) const;
     Matrix operator/(const Matrix& other) const;
-    Matrix operator+(const double scalar) const;
-    Matrix operator-(const double scalar) const;
-    Matrix operator*(const double scalar) const;
-    Matrix operator/(const double scalar) const;
+    Matrix operator+(double scalar) const;
+    Matrix operator-(double scalar) const;
+    Matrix operator*(double scalar) const;
+    Matrix operator/(double scalar) const;
     Matrix apply(const std::function<double(double)>& func) const;
-    Matrix dot(const Matrix& other) const;
-    Matrix transpose() const;
+    [[nodiscard]] Matrix dot(const Matrix& other) const;
+    [[nodiscard]] Matrix transpose() const;
     void print(int precision) const;
 
 
