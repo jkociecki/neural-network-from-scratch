@@ -9,11 +9,11 @@
 
 class Matrix
 {
+
 public:
-    std::vector<std::vector<double>> matrix;
-    size_t rows, cols;
 
 
+    Matrix() : rows(0), cols(0) {}
     Matrix(size_t r, size_t c, double val = 0.0)
         : rows(r), cols(c), matrix(r, std::vector<double>(c, val)) {}
 
@@ -29,14 +29,20 @@ public:
     Matrix operator-(double scalar) const;
     Matrix operator*(double scalar) const;
     Matrix operator/(double scalar) const;
+
     Matrix apply(const std::function<double(double)>& func) const;
     [[nodiscard]] Matrix dot(const Matrix& other) const;
     [[nodiscard]] Matrix transpose() const;
+    [[nodiscard]] double at(size_t row, size_t col) const { return matrix[row][col]; }
+    [[nodiscard]] size_t getRows() const { return rows; }
+    [[nodiscard]] size_t getCols() const { return cols; }
     void print(int precision) const;
 
 
 
 private:
+    std::vector<std::vector<double>> matrix;
+    size_t rows, cols;
     Matrix genericOperator(const Matrix& other, const std::function<double(double, double)>& func) const;
 
 };

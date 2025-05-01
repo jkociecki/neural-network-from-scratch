@@ -4,7 +4,7 @@
 #include <utility>
 
 #include "Matrix.h"
-
+#include "Activation.h"
 
 class Layer
 {
@@ -28,6 +28,9 @@ public:
     Matrix forward(const Matrix& input);
     Matrix backward(const Matrix& error, double learningRate);
 
+    [[nodiscard]] Matrix getOutput() const { return output; }
+    [[nodiscard]] Matrix getWeights() const { return weights; }
+    [[nodiscard]] Matrix getBiases() const { return biases; }
 
 
 

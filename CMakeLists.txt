@@ -10,4 +10,5 @@ add_executable(nn main.cpp
         src/Layer.cpp
         include/Layer.h
         src/NeuralNetwork.cpp
-        include/NeuralNetwork.h)
+        include/NeuralNetwork.h
+        include/Activation.h)
