@@ -1,3 +1,0 @@
-C:/CLionProjects/nn/cmake-build-debug/CMakeFiles/nn.dir
-C:/CLionProjects/nn/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/CLionProjects/nn/cmake-build-debug/CMakeFiles/rebuild_cache.dir
