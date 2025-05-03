@@ -19,7 +19,7 @@ public:
     static double crossEntropyLoss(const Matrix& predicted, const Matrix& target);
     static Matrix crossEntropyDerivative(const Matrix& predicted, const Matrix& target);
     void backward(const Matrix& target);
-    void train(const Matrix& input, const Matrix& target);
+    Matrix predictProbabilities(const Matrix& input);
     void fit(const std::vector<Matrix>& X, const std::vector<Matrix>& y, int epochs, int bachSize = 1);
     int predict(const Matrix& input);
     double evaluate(const std::vector<Matrix>& X, std::vector<Matrix>& y);

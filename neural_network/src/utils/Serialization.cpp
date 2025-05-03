@@ -4,6 +4,8 @@
 
 #include "utils/Serialization.h"
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 namespace Serialization
 {
@@ -46,6 +48,24 @@ namespace Serialization
         }
 
         return matrix;
+    }
+
+    std::map<std::string, std::string> loadConfig(const std::string& filename) {
+        std::map<std::string, std::string> config;
+        std::ifstream file(filename);
+        std::string line;
+
+        while (std::getline(file, line)) {
+            std::istringstream is_line(line);
+            std::string key;
+            if (std::getline(is_line, key, '=')) {
+                std::string value;
+                if (std::getline(is_line, value)) {
+                    config[key] = value;
+                }
+            }
+        }
+        return config;
     }
 
     void serializeNetwork(const NeuralNetwork& network, const std::string& filename)

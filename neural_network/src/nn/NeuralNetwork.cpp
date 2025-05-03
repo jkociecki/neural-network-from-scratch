@@ -47,11 +47,6 @@ void NeuralNetwork::backward(const Matrix &target)
     }
 }
 
-void NeuralNetwork::train(const Matrix &input, const Matrix &target)
-{
-    forward(input);
-    backward(target);
-}
 
 void NeuralNetwork::fit(const std::vector<Matrix> &X, const std::vector<Matrix> &y, int epochs, int batchSize)
 {
@@ -244,4 +239,10 @@ void NeuralNetwork::addLayerWithParams(const Matrix &weights, const Matrix &bias
     layer.setBiases(biases);
 
     layers.push_back(layer);
+}
+
+Matrix NeuralNetwork::predictProbabilities(const Matrix &input)
+{
+    Matrix rawOutput = forward(input);
+    return Activation::softmax(rawOutput);
 }

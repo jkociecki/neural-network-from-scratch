@@ -1,0 +1,4 @@
+train_images=C:\\CLionProjects\\nn\\data\\fashion_mnist\\fashion-train-img
+train_labels=C:\\CLionProjects\\nn\\data\\fashion_mnist\\fashion-train-labels
+test_images=C:\\CLionProjects\\nn\\data\\fashion_mnist\\fashion-test-img
+test_labels=C:\\CLionProjects\\nn\\data\\fashion_mnist\\fashion-test-labels

@@ -9,7 +9,7 @@ namespace Activation
 {
     inline double sigmoid(double x)
     {
-        return 1.0 / (1.0 / std::exp(-x));
+        return 1.0 / (1.0 + std::exp(-x));
     }
 
     inline double sigmoid_derivative(double x)
