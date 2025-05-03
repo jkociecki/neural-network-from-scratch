@@ -29,6 +29,7 @@ Data is loaded from `.idx` binary files directly via custom C++ parsing routines
 The project includes a set of scripts that generate sample input images and visualize predictions made by the trained model. These images allow you to see how the model classifies individual digits or clothing items. Predictions are overlayed on the images for clarity.
 
 All example predictions shown were generated using the actual trained model and real test data. They are located in the `scripts` directory and demonstrate the model's inference behavior.
+
 ![mnist_predictions_grid.png](scripts%2Fimgs%2Fmnist_predictions_grid.png)
 ![fashion_mnist_predictions_grid.png](scripts%2Fimgs%2Ffashion_mnist_predictions_grid.png)
 
