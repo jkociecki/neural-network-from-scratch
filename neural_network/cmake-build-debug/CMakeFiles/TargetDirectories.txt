@@ -1,4 +1,0 @@
-C:/CLionProjects/nn/neural_network/cmake-build-debug/CMakeFiles/nn.dir
-C:/CLionProjects/nn/neural_network/cmake-build-debug/CMakeFiles/predictor.dir
-C:/CLionProjects/nn/neural_network/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/CLionProjects/nn/neural_network/cmake-build-debug/CMakeFiles/rebuild_cache.dir
